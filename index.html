@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Formulario de Contacto</h1>
+    <p>¿Tienes una propuesta, duda o idea? Escríbeme.</p>
+</header>
+
+<section>
+    <article>
+        <h2>Envíame un mensaje</h2>
+
+        <form action="#" method="post">
+            <!-- Fila 1: Nombre y Apellido -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
+                </div>
+            </div>
+
+            <!-- Fila 2: Tipo de Documento y Número DNI -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tipo_doc">Tipo de documento</label>
+                    <select id="tipo_doc" name="tipo_doc" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="TI">Tarjeta de Identidad</option>
+                        <option value="PAS">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dni">Número de Documento (DNI)</label>
+                    <input type="text" id="dni" name="dni" required placeholder="Número de identificación">
+                </div>
+            </div>
+
+            <!-- Fila 3: Fecha de Nacimiento y Teléfono -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Número de teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000">
+                </div>
+            </div>
+
+            <!-- Fila 4: Correo electrónico (Ancho completo) -->
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+
+            <!-- Fila 5: País y Ciudad de Domicilio -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pais">País de domicilio</label>
+                    <input type="text" id="pais" name="pais" required placeholder="Ej. Colombia">
+                </div>
+                <div class="form-group">
+                    <label for="ciudad">Ciudad de domicilio</label>
+                    <input type="text" id="ciudad" name="ciudad" required placeholder="Ej. Bogotá">
+                </div>
+            </div>
+
+            <!-- Asunto -->
+            <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <select id="asunto" name="asunto">
+                    <option>Consulta</option>
+                    <option>Trabajo / Propuesta</option>
+                    <option>Colaboración</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <!-- Motivo del contacto -->
+            <div class="form-group">
+                <label>Motivo del contacto</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="motivo[]" value="web"> Desarrollo web</label>
+                    <label><input type="checkbox" name="motivo[]" value="diseno"> Diseño</label>
+                    <label><input type="checkbox" name="motivo[]" value="soporte"> Soporte</label>
+                </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <!-- Checkbox Tratamiento de datos -->
+            <div class="form-group consent-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos" required>
+                    <span>Acepto la política de <a href="#" class="link-policy">tratamiento de datos personales</a>.</span>
+                </label>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </article>
+</section>
+
+<footer>
+    © 2026 · Formulario de contacto
+</footer>
+
+</body>
+</html>
