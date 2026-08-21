@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +17,6 @@
         <h2>Envíame un mensaje</h2>
         <div>
             <form action="#" method="post">
-            <div class="form-row">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
@@ -27,9 +25,7 @@
                     <label for="apellido">Apellido</label>
                     <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
                 </div>
-            </div>
 
-            <div class="form-row">
                 <div class="form-group">
                     <label for="tipo_doc">Tipo de documento</label>
                     <select id="tipo_doc" name="tipo_doc" required>
@@ -44,9 +40,7 @@
                     <label for="dni">Número de Documento (DNI)</label>
                     <input type="text" id="dni" name="dni" required placeholder="Número de identificación">
                 </div>
-            </div>
 
-            <div class="form-row">
                 <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de nacimiento</label>
                     <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required placeholder="AAAA-MM-DD">
@@ -55,14 +49,12 @@
                     <label for="telefono">Número de teléfono</label>
                     <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000">
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-            </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </div>
 
-            <div class="form-row">
                 <div class="form-group">
                     <label for="pais">País de domicilio</label>
                     <select id="pais" name="pais" required>
@@ -83,17 +75,16 @@
                         <option value="13001">Cartagena</option>
                     </select>
                 </div>
-            </div>
 
-            <div class="form-group consent-group">
-                <label class="checkbox-container">
-                    <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos" required>
-                    <span>Acepto la política de <a href="#" class="link-policy">tratamiento de datos personales</a>.</span>
-                </label>
-            </div>
+                <div class="form-group consent-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos" required>
+                        <span>Acepto la política de <a href="#" class="link-policy">tratamiento de datos personales</a>.</span>
+                    </label>
+                </div>
 
-            <button type="submit">Enviar mensaje</button>
-        </form>
+                <button type="submit">Enviar mensaje</button>
+            </form>
         </div>
     </article>
 </section>
