@@ -36,7 +36,7 @@ header p {
 }
 
 section {
-    max-width: 800px; /* Ajustado para mejor legibilidad */
+    max-width: 800px;
     margin: 50px auto;
     padding: 30px;
     background: #151515;
@@ -62,7 +62,6 @@ article h2 {
     text-shadow: 0 0 6px rgba(78,170,255,0.5);
 }
 
-/* Grid y disposición del formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -73,19 +72,6 @@ form {
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-/* Ajustes para dispositivos móviles */
-@media (max-width: 600px) {
-    .form-row {
-        grid-template-columns: 1fr;
-    }
 }
 
 label {
@@ -109,7 +95,6 @@ input:focus, textarea:focus, select:focus {
     box-shadow: 0 0 8px rgba(78,170,255,0.4);
 }
 
-/* Estilo para el icono del selector de fecha */
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(0.8);
     cursor: pointer;
@@ -120,7 +105,6 @@ textarea {
     min-height: 120px;
 }
 
-/* Opciones de checkbox */
 .checkbox-group {
     display: flex;
     gap: 15px;
@@ -134,7 +118,6 @@ textarea {
     cursor: pointer;
 }
 
-/* Consentimiento / Tratamiento de datos */
 .consent-group {
     margin-top: 10px;
 }
