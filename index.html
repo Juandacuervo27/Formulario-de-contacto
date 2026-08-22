@@ -16,14 +16,14 @@
     <article>
         <h2>Envíame un mensaje</h2>
         <div>
-            <form id="Formulario_registro" action="#">
+            <form id="formulario_registro" action="#" method="get">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" autocomplete="given-name" autofocus>
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
+                    <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido" autocomplete="family-name">
                 </div>
 
                 <div class="form-group">
@@ -38,21 +38,21 @@
                 </div>
                 <div class="form-group">
                     <label for="dni">Número de Documento (DNI)</label>
-                    <input type="text" id="dni" name="dni" required placeholder="Número de identificación">
+                    <input type="text" id="dni" name="dni" required placeholder="Número de identificación" pattern="[0-9]{6,12}" title="Ingrese únicamente números (entre 6 y 12 dígitos)">
                 </div>
 
                 <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de nacimiento</label>
-                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required placeholder="AAAA-MM-DD">
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required min="1920-01-01" max="2026-12-31">
                 </div>
                 <div class="form-group">
                     <label for="telefono">Número de teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000">
+                    <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000" autocomplete="tel">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" autocomplete="email">
                 </div>
 
                 <div class="form-group">
@@ -83,7 +83,7 @@
                     </label>
                 </div>
 
-                <button type="submit">Enviar mensaje</button>
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
             </form>
         </div>
     </article>

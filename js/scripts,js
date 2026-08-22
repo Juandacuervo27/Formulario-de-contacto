@@ -1,0 +1,24 @@
+formulario.addEventListener('submit', function(event), (
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const tipo_doc = document.getElementById('').value;
+    const Dni = document.getElementById('dni').value;
+    const fecha_nac = document.getElementById('fecha_nacimiento').value;
+    const Telefono = document.getElementById('telefono').value;
+    const Email = document.getElementById('email').value;
+    const Pais = document.getElementById('pais').value;
+    const Ciudad = document.getElementById('ciudad').value;
+    const trat_datos = document.getElementById('tratamiento_datos').value;
+
+const usuarioGuardado = CrearUsuario(nombre,
+apellido,
+tipo_doc,
+dni,
+fecha_nacimiento,
+telefono,
+email,
+pais,
+ciudad,
+tratamiento_datos);
+console.log('Registro Creado')
+})
