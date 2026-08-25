@@ -19,9 +19,17 @@ function crearUsuario(nombre, apellido, tipoDoc, dni, fechaNacimiento, telefono,
 
 const formulario = document.querySelector('form');
 
+function agregarPropiedadesUsuario(usuario) {
+    return {
+        ...usuario,
+        activo: true,
+        rol: 'admin'
+    };
+}
+
 formulario.addEventListener('submit', function(event) {
     event.preventDefault();
-
+    
     const datosFormulario = {
         nombre: document.getElementById('nombre').value,
         apellido: document.getElementById('apellido').value,
@@ -48,13 +56,15 @@ formulario.addEventListener('submit', function(event) {
         datosFormulario.tratamientoDatos
     );
 
-    console.log('Registro Creado:', usuarioGuardado);
+    const usuarioActualizado = agregarPropiedadesUsuario(usuarioGuardado);
 
-    const usuarioJSON = JSON.stringify(usuarioGuardado);
+    console.log('Objeto Original (Sin cambios):', usuarioGuardado);
+    console.log('Objeto Nuevo (Con Spread):', usuarioActualizado);
 
-    localStorage.setItem(`usuario_${usuarioGuardado.id}`, usuarioJSON);
+    const usuarioJSON = JSON.stringify(usuarioActualizado);
+    localStorage.setItem(`usuario_${usuarioActualizado.id}`, usuarioJSON);
 
-    console.log(`Usuario guardado exitosamente con la key: usuario_${usuarioGuardado.id}`);
-
+    console.log(`Usuario guardado exitosamente con la key: usuario_${usuarioActualizado.id}`);
     formulario.reset();
 });
+
