@@ -1,17 +1,19 @@
-function crearUsuario(datos) {
+function crearUsuario(nombre, apellido, tipoDoc, dni, fechaNacimiento, telefono, email, pais, ciudad, tratamientoDatos) {
     return {
         id: Date.now(),
-        nombreCompleto: `${datos.nombre} ${datos.apellido}`,
+        nombreCompleto: `${nombre} ${apellido}`,
         documento: {
-            tipo: datos.tipoDoc,
-            num: datos.dni
+            tipo: tipoDoc,
+            num: dni
         },
-        fechaNacimiento: datos.fechaNacimiento,
-        telefono: datos.telefono,
-        email: datos.email,
-        pais: datos.pais,
-        ciudad: datos.ciudad,
-        tratamientoDatos: datos.tratamientoDatos
+        fechaNacimiento: fechaNacimiento,
+        telefono: telefono,
+        email: email,
+        domicilio: {
+            pais: pais,
+            ciudad: ciudad
+        },
+        tratamientoDatos: tratamientoDatos
     };
 }
 
@@ -33,12 +35,26 @@ formulario.addEventListener('submit', function(event) {
         tratamientoDatos: document.getElementById('tratamiento_datos').checked
     };
 
-    const usuarioGuardado = crearUsuario(datosFormulario);
+    const usuarioGuardado = crearUsuario(
+        datosFormulario.nombre,
+        datosFormulario.apellido,
+        datosFormulario.tipoDoc,
+        datosFormulario.dni,
+        datosFormulario.fechaNacimiento,
+        datosFormulario.telefono,
+        datosFormulario.email,
+        datosFormulario.pais,
+        datosFormulario.ciudad,
+        datosFormulario.tratamientoDatos
+    );
 
     console.log('Registro Creado:', usuarioGuardado);
 
     const usuarioJSON = JSON.stringify(usuarioGuardado);
-    localStorage.setItem('usuarioGuardado', usuarioJSON);
 
-    console.log('Usuario Creado');
+    localStorage.setItem(`usuario_${usuarioGuardado.id}`, usuarioJSON);
+
+    console.log(`Usuario guardado exitosamente con la key: usuario_${usuarioGuardado.id}`);
+
+    formulario.reset();
 });
